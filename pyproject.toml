@@ -7,7 +7,9 @@ authors = [
     { name = "Tezcayotl", email = "escuderoenriquez2210@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fpdf2>=2.8.9",
+]
 
 [project.scripts]
 101-ways-to-python = "101_ways_to_python:main"
@@ -15,3 +17,9 @@ dependencies = []
 [build-system]
 requires = ["uv_build>=0.12.4,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyterlab>=4.6.4",
+]
